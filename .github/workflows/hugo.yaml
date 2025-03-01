@@ -77,8 +77,8 @@ jobs:
           HUGO_ENVIRONMENT: production
           TZ: America/New_York
         run: |
-          	GOMAXPROCS=1 hugo --cleanDestinationDir --minify --environment production --baseURL "${{ steps.pages.outputs.base_url }}"
-           ./scripts/check-headers-file.sh
+          GOMAXPROCS=1 hugo --cleanDestinationDir --minify --environment production --baseURL "${{ steps.pages.outputs.base_url }}"
+          ./scripts/check-headers-file.sh
 
           # hugo \
           #   --gc \

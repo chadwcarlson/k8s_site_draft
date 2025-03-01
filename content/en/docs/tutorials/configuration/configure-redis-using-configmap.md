@@ -22,6 +22,20 @@ In this tutorial, you'll learn how to do the following tasks:
 
 ![some before & after image](/images/hellonode/image_5.png)
 
+## Requirements
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+
+## Limitations and considerations
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+
 
 
 This page provides a real world example of how to configure Redis using a ConfigMap and builds upon the [Configure a Pod to Use a ConfigMap](/docs/tasks/configure-pod-container/configure-pod-configmap/) task. 

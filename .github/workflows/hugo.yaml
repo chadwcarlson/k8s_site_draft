@@ -71,8 +71,7 @@ jobs:
 
           git submodule update --init --recursive --depth 1
           npm ci
-          # Subpath config requires no leading slash
-          GOMAXPROCS=1 hugo --cleanDestinationDir --minify --environment ${HUGO_ENV} --baseURL "k8s_site_draft/"
+          GOMAXPROCS=1 hugo --cleanDestinationDir --minify --environment ${HUGO_ENV} --baseURL "${{ steps.pages.outputs.base_url }}"
           ./scripts/check-headers-file.sh
           npx -y pagefind --site public
 

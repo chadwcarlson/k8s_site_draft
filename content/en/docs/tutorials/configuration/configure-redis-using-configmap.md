@@ -9,6 +9,82 @@ weight: 30
 
 <!-- overview -->
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus, finibus et sodales vel, commodo sit amet dolor. Etiam eros sem, vehicula in blandit nec, vestibulum vitae nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus, finibus et sodales vel, commodo sit amet dolor. Etiam eros sem, vehicula in blandit nec, vestibulum vitae nunc. 
+
+## What you'll learn
+
+In this tutorial, you'll learn how to do the following tasks:
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+
+![some before & after image](/images/hellonode/image_5.png)
+
+## Requirements
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+
+## Limitations and considerations
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+
+{{< tabs name="log_location_node_tabs" >}}
+{{% tab name="Linux" %}}
+
+On Linux nodes that use systemd, the kubelet and container runtime write to journald
+by default. You use `journalctl` to read the systemd journal; for example:
+`journalctl -u kubelet`.
+
+If systemd is not present, the kubelet and container runtime write to `.log` files in the
+`/var/log` directory. If you want to have logs written elsewhere, you can indirectly
+run the kubelet via a helper tool, `kube-log-runner`, and use that tool to redirect
+kubelet logs to a directory that you choose.
+
+By default, kubelet directs your container runtime to write logs into directories within
+`/var/log/pods`.
+
+```yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: example-redis-config
+data:
+  redis-config: |
+    maxmemory 2mb
+    maxmemory-policy allkeys-lru    
+```
+
+For more information on `kube-log-runner`, read [System Logs](/docs/concepts/cluster-administration/system-logs/#klog).
+
+{{% /tab %}}
+{{% tab name="Windows" %}}
+
+By default, the kubelet writes logs to files within the directory `C:\var\logs`
+(notice that this is not `C:\var\log`).
+
+Although `C:\var\log` is the Kubernetes default location for these logs, several
+cluster deployment tools set up Windows nodes to log to `C:\var\log\kubelet` instead.
+
+If you want to have logs written elsewhere, you can indirectly
+run the kubelet via a helper tool, `kube-log-runner`, and use that tool to redirect
+kubelet logs to a directory that you choose.
+
+However, by default, kubelet directs your container runtime to write logs within the
+directory `C:\var\log\pods`.
+
+For more information on `kube-log-runner`, read [System Logs](/docs/concepts/cluster-administration/system-logs/#klog).
+{{% /tab %}}
+{{< /tabs >}}
+
+
 This page provides a real world example of how to configure Redis using a ConfigMap and builds upon the [Configure a Pod to Use a ConfigMap](/docs/tasks/configure-pod-container/configure-pod-configmap/) task. 
 
 

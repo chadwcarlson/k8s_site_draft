@@ -9,6 +9,21 @@ weight: 30
 
 <!-- overview -->
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus, finibus et sodales vel, commodo sit amet dolor. Etiam eros sem, vehicula in blandit nec, vestibulum vitae nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus, finibus et sodales vel, commodo sit amet dolor. Etiam eros sem, vehicula in blandit nec, vestibulum vitae nunc. 
+
+## What you'll learn
+
+In this tutorial, you'll learn how to do the following tasks:
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla magna metus.
+
+![some before & after image](/images/hellonode/image_5.png)
+
+
+
 This page provides a real world example of how to configure Redis using a ConfigMap and builds upon the [Configure a Pod to Use a ConfigMap](/docs/tasks/configure-pod-container/configure-pod-configmap/) task. 
 
 

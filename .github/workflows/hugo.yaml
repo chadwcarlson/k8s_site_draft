@@ -66,9 +66,9 @@ jobs:
       # - name: Install Node.js dependencies
       #   run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
 
-      - name:
-        run: |
-          git submodule update --init --recursive --depth 1 && make production-build && npx -y pagefind --site public
+      # - name:
+      #   run: |
+      #     git submodule update --init --recursive --depth 1 && make production-build && npx -y pagefind --site public
 
 
       - name: Build with Hugo
@@ -77,8 +77,11 @@ jobs:
           HUGO_ENVIRONMENT: production
           TZ: America/New_York
         run: |
+          git submodule update --init --recursive --depth 1
+          npm ci
           GOMAXPROCS=1 hugo --cleanDestinationDir --minify --environment production --baseURL "${{ steps.pages.outputs.base_url }}"
           ./scripts/check-headers-file.sh
+          npx -y pagefind --site public
 
           # hugo \
           #   --gc \

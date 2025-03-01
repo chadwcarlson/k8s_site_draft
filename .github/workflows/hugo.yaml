@@ -64,10 +64,15 @@ jobs:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
           TZ: America/New_York
+          # URL: ${{ steps.deployment.outputs.page_url }}
         run: |
+          # echo "$URL"
+          # echo "$URL/k8s_site_draft"
+
           git submodule update --init --recursive --depth 1
           npm ci
-          GOMAXPROCS=1 hugo --cleanDestinationDir --minify --environment ${HUGO_ENV} --baseURL "${{ steps.pages.outputs.base_url }}"
+          # Subpath config requires no leading slash
+          GOMAXPROCS=1 hugo --cleanDestinationDir --minify --environment ${HUGO_ENV} --baseURL "k8s_site_draft/"
           ./scripts/check-headers-file.sh
           npx -y pagefind --site public
 
